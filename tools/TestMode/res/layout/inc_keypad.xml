@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+		
+	<Button android:id="@+id/textVolUp"
+	android:layout_width="fill_parent"
+	android:layout_height="80px"
+	android:text="@string/VolUp"
+	android:textSize="30px"
+	android:padding="20px"/>
+
+	<Button android:id="@+id/textVolDown"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/VolDown"
+		android:textSize="30px"
+		android:padding="20px"/>
+	
+	<!-- <Button android:id="@+id/textRayhov"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/Rayhov"
+		android:textSize="30px"
+		android:padding="20px"/> [yeez_haojie modify 11.15]-->	
+
+	<Button android:id="@+id/textHome"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/Home"
+		android:textSize="30px"
+		android:padding="20px"/>
+
+	<Button android:id="@+id/textMenu"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/Menu"
+		android:textSize="30px"
+		android:padding="20px"/>
+
+	<Button android:id="@+id/textBack"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/Back"
+		android:textSize="30px"
+		android:padding="20px"/>
+
+	<!-- <Button android:id="@+id/textSearch"
+		android:layout_width="fill_parent"
+		android:layout_height="80px"
+		android:text="@string/Search"
+		android:textSize="30px"
+		android:padding="20px"/> [yeez_haojie modify 11.15]-->
+</LinearLayout>

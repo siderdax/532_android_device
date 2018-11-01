@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+	<TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:shrinkColumns="1"
+	    android:id="@+id/bt_phone_table_layout">
+	    
+	 	<View 
+	        android:id="@+id/bt_phone_div_line_vol"
+	        android:layout_height="80dp" />
+	 	<TableRow>
+	        <TextView
+	            android:id="@+id/bt_phone_downlink"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/bt_phone_downlink"
+	            android:textColor="@color/black"
+	            android:textSize="15sp"
+	            />
+	    </TableRow>
+	    <TableRow>
+	        <SeekBar 
+	            android:id="@+id/bt_phone_downlink_bar"
+	            android:layout_width="320dp"
+	            android:layout_height="wrap_content"
+	            android:max="100"
+	            android:progress="50" />
+	    </TableRow>
+	    <TableRow>
+	        <TextView
+	            android:id="@+id/bt_phone_uplink"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/bt_phone_uplink"
+	            android:textColor="@color/black"
+	            android:textSize="15sp"
+	            />
+	    </TableRow>
+	    <TableRow>
+	        <SeekBar 
+	            android:id="@+id/bt_phone_uplink_bar"
+	            android:layout_width="320dp"
+	            android:layout_height="wrap_content"
+	            android:max="100"
+	            android:progress="50" />
+	    </TableRow>
+	    
+    </TableLayout>
+    
+	<!--<View 
+        android:id="@+id/bt_phone_div_line_button"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="@color/black"
+        android:layout_below="@id/bt_phone_uplink_bar"/>-->
+
+    <Button
+        android:id="@+id/bt_phone_forever_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@id/bt_phone_table_layout"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"        
+        android:text="@string/forever_btn"
+        android:background="@drawable/button_blue_selector" />  
+    <Button
+        android:id="@+id/bt_phone_test_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@id/bt_phone_table_layout" 
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"        
+        android:text="@string/bt_phone_call_test_btn"
+        android:background="@drawable/button_red_selector" /> 
+     
+
+</RelativeLayout>

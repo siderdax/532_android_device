@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" 
+		android:orientation="vertical"
+		android:layout_weight="1" >
+		<!-- space line for result list at following -->
+		<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textSize="17dip"
+			android:text="@string/sim_card_0_result"
+			android:textStyle="bold" />
+				
+		<ScrollView 
+			android:layout_width="fill_parent" 
+			android:layout_height="340dip" >     <!-- modify by [yeez_chaomin] 20121020 -->
+			<TextView 
+				android:id="@+id/sim_test_list_0"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:textSize="17dip"/>
+		</ScrollView>
+				<TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"/>
+		<!-- <TextView
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:textSize="17dip"
+			android:text="@string/sim_card_1_result"
+			android:textStyle="bold"  />
+				
+		<ScrollView 
+			android:layout_width="fill_parent" 
+			android:layout_height="190dip" >
+			<TextView 
+				android:id="@+id/sim_test_list_1"
+				android:layout_width="fill_parent" 
+				android:layout_height="wrap_content"
+				android:textSize="17dip"/> 
+		</ScrollView>    -->       <!-- remove by [yeez_chaomin] 20121020 -->
+	</LinearLayout>
+	
+    <!-- modify by [yeez_haojie] 201211.14-->
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" android:padding="1px">
+
+
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"
+	       android:layout_width="wrap_content" android:visibility="gone" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</LinearLayout>

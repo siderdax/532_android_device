@@ -1,0 +1,221 @@
+<mixer>
+
+  <!-- Playback paths -->
+
+  <path name="media-speaker">
+		<ctl name="DAC1 L Mux" value="IF1 DAC" />
+		<ctl name="DAC1 R Mux" value="IF1 DAC" />
+		<ctl name="DAC1 MIXL DAC1 Switch" value="1" />
+		<ctl name="DAC1 MIXR DAC1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXL DAC L1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXR DAC R1 Switch" value="1" />
+		<ctl name="SPK MIXL DAC L1 Switch" value="1" />
+		<ctl name="SPK MIXR DAC R1 Switch" value="1" />
+		<ctl name="SPKVOL L Switch" value="1" />
+		<ctl name="SPKVOL R Switch" value="1" />
+		<ctl name="SPOL MIX SPKVOL L Switch" value="1" />
+		<ctl name="SPOR MIX SPKVOL R Switch" value="1" />	
+		<ctl name="Speaker Playback Volume" value="31"/>
+  </path>
+
+  <path name="media-headphones">
+		<ctl name="DAC1 L Mux" value="IF1 DAC" />
+		<ctl name="DAC1 R Mux" value="IF1 DAC" />
+		<ctl name="DAC1 MIXL DAC1 Switch" value="1" />
+		<ctl name="DAC1 MIXR DAC1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXL DAC L1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXR DAC R1 Switch" value="1" />
+		<ctl name="HPOVOL MIXL DAC1 Switch" value="1" />
+		<ctl name="HPOVOL MIXR DAC1 Switch" value="1" />
+		<ctl name="HPOVOL L Switch" value="1" />
+		<ctl name="HPOVOL R Switch" value="1" />
+		<ctl name="HPO MIX HPVOL Switch" value="1" />	
+  </path>
+
+  <path name="speaker-and-headphones">
+		<ctl name="DAC1 L Mux" value="IF1 DAC" />
+		<ctl name="DAC1 R Mux" value="IF1 DAC" />
+		<ctl name="DAC1 MIXL DAC1 Switch" value="1" />
+		<ctl name="DAC1 MIXR DAC1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXL DAC L1 Switch" value="1" />
+		<ctl name="Stereo DAC MIXR DAC R1 Switch" value="1" />
+		<ctl name="SPK MIXL DAC L1 Switch" value="1" />
+		<ctl name="SPK MIXR DAC R1 Switch" value="1" />
+		<ctl name="SPKVOL L Switch" value="1" />
+		<ctl name="SPKVOL R Switch" value="1" />
+		<ctl name="SPOL MIX SPKVOL L Switch" value="1" />
+		<ctl name="SPOR MIX SPKVOL R Switch" value="1" />
+		<ctl name="Speaker Playback Volume" value="39"/>
+		
+		<ctl name="HPOVOL MIXL DAC1 Switch" value="1" />
+		<ctl name="HPOVOL MIXR DAC1 Switch" value="1" />
+		<ctl name="HPOVOL L Switch" value="1" />
+		<ctl name="HPOVOL R Switch" value="1" />
+		<ctl name="HPO MIX HPVOL Switch" value="1" />
+  </path>
+
+
+
+  <!-- Capture paths -->
+
+  <path name="media-main-mic">
+		<ctl name="RECMIXL BST2 Switch" value="1" />
+		<ctl name="RECMIXR BST2 Switch" value="1" />
+		<ctl name="Sto1 ADC MIXL ADC2 Switch" value="0" />
+		<ctl name="Sto1 ADC MIXR ADC2 Switch" value="0" />
+		<ctl name="Sto1 ADC MIXL ADC1 Switch" value="1" />
+		<ctl name="Sto1 ADC MIXR ADC1 Switch" value="1" />
+		<ctl name="IN1 Boost" value="0" />
+  </path>
+
+  <path name="media-second-mic">
+		 <path name="media-main-mic"></path>
+  </path>
+
+   <path name="media-headset-mic">
+		<ctl name="RECMIXL BST1 Switch" value="1" />
+		<ctl name="RECMIXR BST1 Switch" value="1" />
+		<ctl name="Sto1 ADC MIXL ADC2 Switch" value="0" />
+		<ctl name="Sto1 ADC MIXR ADC2 Switch" value="0" />
+		<ctl name="Sto1 ADC MIXL ADC1 Switch" value="1" />
+		<ctl name="Sto1 ADC MIXR ADC1 Switch" value="1" />
+		<ctl name="IN1 Boost" value="0" />
+		<ctl name="ADC Capture Volume" value = "100"/>
+  </path>
+
+<!--Voice recognition-->
+
+<path name="voice-rec-speaker">
+		  <path name="media-speaker" />
+		  <ctl name="Speaker Playback Volume" value="39"/>
+</path>
+<path name="voice-rec-headphones">
+		   <path name="media-headphones" />
+</path>
+<path name="voice-rec-main-mic">
+		  <path name="media-main-mic" />
+</path>
+<path name="voice-rec-headset-mic">
+		<path name="media-headset-mic" />
+</path>
+
+<path name="bt-sco-headset">
+		<ctl name="DAC1 L Mux" value="IF1 DAC" />
+		<ctl name="DAC1 R Mux" value="IF1 DAC" />
+		<ctl name="DAC1 MIXL DAC1 Switch" value="1" />
+		<ctl name="DAC1 MIXR DAC1 Switch" value="1" />
+		<ctl name="Mono DAC MIXL DAC L1 Switch" value="1" />
+		<ctl name="Mono DAC MIXR DAC R1 Switch" value="1" />
+		<ctl name="Mono ADC L1 Mux" value="Mono DAC MIXL" />
+		<ctl name="Mono ADC R1 Mux" value="Mono DAC MIXR" />
+		<ctl name="Mono ADC MIXL ADC1 Switch" value="1" />
+		<ctl name="Mono ADC MIXR ADC1 Switch" value="1" />
+		<ctl name="IF2 ADC Mux" value="IF_ADC2" />
+</path>
+
+<path name="bt-sco-mic">
+		<ctl name="DAC L2 Mux" value="IF2 DAC" />
+		<ctl name="DAC R2 Mux" value="IF2 DAC" />
+		<ctl name="DAC MIXL DAC L2 Switch" value="1" />
+		<ctl name="DAC MIXR DAC R2 Switch" value="1" />
+		<!--
+		<ctl name="Stereo1 ADC L1 Mux" value="DAC MIX" />
+		<ctl name="Stereo1 ADC R1 Mux" value="DAC MIX" />
+		-->
+		<ctl name="Stereo1 ADC1 Mux" value="DAC MIX" />
+		<ctl name="Sto1 ADC MIXL ADC1 Switch" value="1" />
+		<ctl name="Sto1 ADC MIXR ADC1 Switch" value="1" />
+</path>
+
+
+  <!--communication-->
+<path name="communication-speaker">
+		<ctl name="DAC L2 Mux" value="IF3 DAC"/>
+		<ctl name="DAC R2 Mux" value="IF3 DAC"/>
+		<ctl name="SPK MIXL DAC L2 Switch" value="1" />
+		<ctl name="SPK MIXR DAC R2 Switch" value="1" />
+		<ctl name="SPKVOL L Switch" value="1" />
+		<ctl name="SPKVOL R Switch" value="1" />
+		<ctl name="SPOL MIX SPKVOL L Switch" value="1" />
+		<ctl name="SPOR MIX SPKVOL R Switch" value="1" />	
+
+		<ctl name="Mono DAC MIXL DAC L2 Switch" value="1"/>
+		<ctl name="Mono DAC MIXR DAC L2 Switch" value="1"/>	
+		 <ctl name="Speaker Playback Volume" value="39"/>
+		
+		
+</path>	
+<path name="communication-main-mic">
+		<ctl name="ADC IF3 Data Switch" value="Normal"/>
+		<ctl name="RECMIXL BST2 Switch" value="1"/>
+		<ctl name="RECMIXR BST2 Switch" value="1"/>
+		<!--
+		<ctl name="Stereo1 ADC L1 Mux" value="ADC"/>
+		<ctl name="Stereo1 ADC R1 Mux" value="ADC"/>
+		-->
+		<ctl name="Stereo1 ADC1 Mux" value="ADC" />
+
+		<ctl name="Sto1 ADC MIXL ADC2 Switch" value="0" />
+		<ctl name="Sto1 ADC MIXR ADC2 Switch" value="0" />
+
+		<ctl name="Sto1 ADC MIXL ADC1 Switch" value="1"/>
+		<ctl name="Sto1 ADC MIXR ADC1 Switch" value="1"/>
+		<ctl name="IF3 ADC Mux" value="IF_ADC1"/>
+</path>
+
+<path name="communication-headphones">
+    		<ctl name="DAC L2 Mux" value="IF3 DAC"/>
+    		<ctl name="DAC R2 Mux" value="IF3 DAC"/>
+		<ctl name="DAC IF3 Data Switch" value= "left copy to right"/>
+    		<ctl name="DAC1 MIXL DAC1 Switch" value="1" />
+		<ctl name="DAC1 MIXR DAC1 Switch" value="1" />
+    		<ctl name="Stereo DAC MIXL DAC L2 Switch" value="1"/>
+    		<ctl name="Stereo DAC MIXR DAC R2 Switch" value="1"/>
+  		<ctl name="HPOVOL MIXL DAC1 Switch" value="1" />
+		<ctl name="HPOVOL MIXR DAC1 Switch" value="1" />
+		<ctl name="HPOVOL L Switch" value="1" />
+		<ctl name="HPOVOL R Switch" value="1" />
+		<ctl name="HPO MIX HPVOL Switch" value="1" />	
+		
+ </path>	    
+
+<path name="communication-headset-mic">    
+    		<ctl name="ADC IF3 Data Switch" value="Normal"/>
+    		<ctl name="RECMIXL BST1 Switch" value="1"/>
+    		<ctl name="RECMIXR BST1 Switch" value="1"/>
+    		<!--
+    		<ctl name="Stereo1 ADC L1 Mux" value="ADC"/>
+    		<ctl name="Stereo1 ADC R1 Mux" value="ADC"/>
+    		-->
+    		<ctl name="Stereo1 ADC1 Mux" value="ADC" />
+
+    		<ctl name="Sto1 ADC MIXL ADC2 Switch" value="0" />
+    		<ctl name="Sto1 ADC MIXR ADC2 Switch" value="0" />
+
+    		<ctl name="Sto1 ADC MIXL ADC1 Switch" value="1"/>
+    		<ctl name="Sto1 ADC MIXR ADC1 Switch" value="1"/>
+    		<ctl name="IF3 ADC Mux" value="IF_ADC1"/>
+    		<ctl name="ADC Capture Volume" value = "100"/>
+</path>	
+
+<path name= "communication-bt-sco-headset">
+		<ctl name= "ADC IF2 Data Switch" value= "right copy to left"/>
+		<ctl name= "DAC IF3 Data Switch" value= "left copy to right"/>
+		<ctl name= "DAC R2 Mux" value="IF3 DAC" />
+		<ctl name= "Mono DAC MIXR DAC R2 Switch" value= "1"/>
+		<ctl name= "Mono ADC R1 Mux" value="Mono DAC MIXR" />
+		<ctl name= "Mono ADC MIXR ADC1 Switch" value= "1"/>
+		<ctl name= "IF2 ADC Mux" value= "IF_ADC2" />
+</path>	
+  
+ <path name= "communication-bt-sco-mic">
+ 		<ctl name= "ADC IF3 Data Switch" value= "left copy to right"/>
+		<ctl name= "DAC IF2 Data Switch" value = "left copy to right"/>	 	       
+ 		<ctl name= "DAC L2 Mux" value= "IF2 DAC"/>
+ 		<ctl name= "Mono DAC MIXL DAC L2 Switch" value= "1" />
+ 		<ctl name= "Mono ADC L1 Mux" value= "Mono DAC MIXL"/>
+ 		<ctl name= "Mono ADC MIXL ADC1 Switch" value="1" />
+ 		<ctl name= "IF3 ADC Mux" value= "IF_ADC2"/>
+ </path>	
+ 
+</mixer>

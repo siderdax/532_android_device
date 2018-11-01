@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- yeez_haojie modify 12.18 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    <!-- <Button android:id="@+id/nButton"
+    android:textSize="25px"
+		android:layout_width="fill_parent" android:layout_height="80px" 
+		android:/> -->
+<TextView  
+    android:id="@+id/t1"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="25px"
+    android:layout_alignParentTop="true"
+    />
+    <TextView  
+    android:id="@+id/t2"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textSize="25px"
+    android:layout_below = "@+id/t1"
+    />
+    
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" android:padding="1px">
+
+
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"       
+	       android:layout_width="wrap_content" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</RelativeLayout>
+

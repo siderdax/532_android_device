@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+ * Copyright (C) 2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ -->
+
+<resources>
+   
+    <!-- [yeez_haojie] 2012.11.27 -->
+    <string-array name="clear_data">
+        <item>Clear data</item>
+        <item>Close module</item>
+    </string-array>
+    <!--end [yeez_haojie]2012.11.8 -->
+    
+    <string-array name="playback_tabswitcher">
+        <item>单设备输出</item>
+        <item>SPK与HP双开</item>
+    </string-array>
+    
+    <string-array name="record_tabswitcher">
+        <item>非电话录音</item>
+        <item>电话录音</item>
+    </string-array>
+    <string-array name="voice_tabswitcher">
+        <item>手机电话下行</item>
+        <item>手机电话上行</item>
+    </string-array>
+    
+    <string-array name="bt_tabswitcher">
+        <item>蓝牙耳机电话</item>
+        <item>蓝牙耳机VOIP</item>
+    </string-array>
+    
+    <string-array name="fm_tabswitcher">
+		<item>FM播放</item>
+		<item>FM录音</item>       
+    </string-array>
+    
+    <string-array name="spinner_tz">
+        <item>Enable</item>
+        <item>Disable</item>
+    </string-array>
+    
+    <string-array name="spinner_trip">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+    
+    <string-array name="spinner_cooler_name">
+        <item>cpu-sysrst</item>
+        <item>abb-sysrst</item>
+        <item>pmic-sysrst</item>
+        <item>pa-sysrst</item>
+        <item>battery-sysrst</item>
+        <item>wmt-sysrst</item>
+    </string-array>
+    
+</resources>
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+	<item
+	    android:id="@+id/menu_welcome"
+	    android:orderInCategory="1"
+	    android:icon="@drawable/menu_welcome"
+	    android:title="@string/menu_welcome" />
+	<item
+	    android:id="@+id/menu_current"
+	    android:orderInCategory="2"
+	    android:icon="@drawable/menu_current"
+	    android:title="@string/menu_current" />
+	<item
+	    android:id="@+id/menu_recent"
+	    android:orderInCategory="3"
+	    android:icon="@drawable/menu_recent"
+	    android:title="@string/menu_recent" />
+	<item
+	    android:id="@+id/menu_save"
+	    android:orderInCategory="4"
+	    android:icon="@drawable/menu_save"
+	    android:title="@string/menu_save" />
+</menu>

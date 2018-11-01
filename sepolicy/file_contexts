@@ -1,0 +1,39 @@
+/dev/mali0              u:object_r:gpu_device:s0
+#G2D is used for skia 2D, so set to gpu_device for every app can use it
+/dev/fimg2d             u:object_r:gpu_device:s0
+
+/dev/seiren             u:object_r:audio_device:s0
+/dev/media0             u:object_r:video_device:s0
+/dev/v4l-subdev[0-9]*   u:object_r:video_device:s0
+
+#mobicore
+/dev/mobicore           u:object_r:tee_device:s0
+/dev/mobicore-user      u:object_r:tee_device:s0
+/system/bin/mcDriverDaemon  --  u:object_r:tee_exec:s0
+
+#camera
+/dev/m2m1shot_scaler0   u:object_r:camera_device:s0
+/dev/m2m1shot_scaler1   u:object_r:camera_device:s0
+/dev/m2m1shot_jpeg 		u:object_r:camera_device:s0 
+
+#record_panic
+/dev/panic_msg          u:object_r:log_device:s0
+
+# gps
+/dev/ttySAC1                    u:object_r:gps_device:s0
+#
+/dev/i2c-16          u:object_r:nfc_device:s0 
+#bluetooth
+/dev/ttySAC4            u:object_r:hci_attach_dev:s0
+/factory(/.*)?          u:object_r:efs_file:s0
+/factory/bluetooth(/.*)?        u:object_r:bluetooth_efs_file:s0
+/sys/class/rfkill/rfkill0/state u:object_r:sysfs_bluetooth_writable:s0
+/sys/class/rfkill/rfkill0/type u:object_r:sysfs_bluetooth_writable:s0
+# for logkit tool
+/system/bin/logkit                  u:object_r:logkit_exec:s0
+/sdcard(/.*)?		            u:object_r:sdcard_internal:s0
+/system/bin/record_panic_msg                  u:object_r:record_panic_exec:s0
+#for january_booster & hotplug
+/system/bin/january_booster         u:object_r:january_booster_exec:s0
+/system/bin/march_hotplug           u:object_r:march_hotplug_exec:s0
+/dev/january                        u:object_r:january_device:s0

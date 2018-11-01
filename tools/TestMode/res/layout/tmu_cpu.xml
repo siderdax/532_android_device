@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tmu_cpu_scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollbars="vertical">
+<TableLayout
+    android:id="@+id/tmu_cpu_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/orange"
+    android:stretchColumns="5" >
+    
+    <LinearLayout
+        android:id="@+id/title_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/tmu_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tmu_set"
+            android:layout_weight="1" />
+	    <TextView
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textColor="@color/red"
+			android:textSize="30sp"
+			android:textStyle="bold|italic"
+			android:gravity="center"
+			android:text="@string/cpu"
+			android:layout_weight="1" />
+	    <Button
+            android:id="@+id/tmu_reboot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/tmu_reboot"
+            android:layout_weight="1" />
+    </LinearLayout>       
+    <!-- TZ Name -->
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>       
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/tz_name"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/cpu"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:background="@color/gray"
+            android:gravity="center"/>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_tz"
+        	android:layout_width="match_parent"
+        	android:layout_height="match_parent"/>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+    </TableRow>
+    
+    <!-- Number of Trip -->
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/number_of_trip"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_trip"
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+       <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:textSize="15sp"
+        	android:gravity="center"/>
+
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+    </TableRow>
+    
+
+    <View 
+        android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <View 
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:background="#00000000"/>
+</TableLayout>
+</ScrollView>

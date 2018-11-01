@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    	<!-- view1 goes on top -->
+	<!--<include layout="@xml/inc_fm" />-->
+	<LinearLayout
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_weight="1"
+	    >
+	     <LinearLayout
+	     android:orientation="horizontal"
+	     android:layout_width="fill_parent"
+	     android:layout_height="50dp"
+	     >
+	     <TextView
+		     android:layout_width="wrap_content"
+		     android:layout_height="38dp"
+		     android:layout_marginTop="5dp"
+		     android:layout_marginLeft="10dp"
+		     android:textSize="18sp"
+		     android:text="@string/preinstall_name"
+		     android:layout_weight="1"
+		     />
+	     </LinearLayout>
+
+	    <LinearLayout
+	     android:orientation="horizontal"
+	     android:layout_width="fill_parent"
+	     android:layout_height="80dp"
+	     >
+	     <EditText
+		android:id="@+id/edit_fm_value"
+		android:layout_width="120dp"
+		android:layout_height="60dp"
+		android:layout_marginLeft="10dp"
+		android:layout_marginRight="10dp"
+		android:scrollbarStyle="outsideOverlay"
+		android:scrollingCache="true"
+		/>
+
+		<Button android:id="@+id/begin_fm_test" android:text="@string/start"
+		       android:layout_height="60dp"
+		       android:layout_width="wrap_content"></Button>
+		</LinearLayout>
+	</LinearLayout>
+
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent" android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true" android:padding="1dp">
+
+
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80dp"
+	       android:layout_width="wrap_content" android:visibility="gone"/>
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80dp"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+
+
+</RelativeLayout>
+

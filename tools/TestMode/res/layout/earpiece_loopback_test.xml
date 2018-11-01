@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+ <!--  [yeez_haojie modify 12.20] -->	
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center"   
+    >
+	<TextView 
+   		android:id="@+id/micphone_msg"
+   		android:layout_height="wrap_content" 
+		android:layout_width="wrap_content" 
+		android:text="@string/earpiece_audioloop_test"
+		android:textSize="30dip" 
+		android:gravity="center"
+		/> 
+	<TextView 
+   		android:id="@+id/micphone_msg"
+   		android:layout_height="111dip" 
+		android:layout_width="20dip" 
+		/> 
+		
+	 <!--  [yeez_haojie add 11.30] -->	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent" android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true" android:padding="1px">
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"
+	       
+	       android:layout_width="wrap_content" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</RelativeLayout>

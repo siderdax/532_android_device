@@ -1,0 +1,6 @@
+-dontwarn com.android.ex.chips.**
+-keep class com.android.ex.chips.**{*;}
+
+-keepclassmembers class * implements android.content.SharedPreferences$Editor {
+    public *** apply();
+}

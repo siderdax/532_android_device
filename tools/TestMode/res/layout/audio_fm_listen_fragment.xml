@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.TestMode"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+	<TableLayout
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:shrinkColumns="1"
+	    android:id="@+id/fm_table_layout">
+
+	    <!-- <com.android.TestMode.TabSwitcher
+		    android:id="@+id/fm_tabswitcher"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"			
+	        app:arrayId="@array/fm_tabswitcher"/> -->
+	    <!--<View 
+	        android:id="@+id/fm_div_line_vol"
+	        android:layout_height="2dp"
+	        android:background="@color/black"/>-->
+	
+	    <TableRow>
+	        <TextView
+	            android:id="@+id/fm_spk_vol"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/spk_vol"
+	            android:textColor="@color/black"
+	            android:textSize="15sp"
+	            />
+	    </TableRow>
+	    <TableRow>
+	        <SeekBar 
+	            android:id="@+id/fm_spk_vol_bar"
+	            android:layout_width="320dp"
+	            android:layout_height="wrap_content"
+	            android:max="100"
+	            android:progress="50" />
+	    </TableRow>
+
+	    <TableRow>
+	       <TextView
+	            android:id="@+id/fm_hp_vol"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/hp_vol"
+	            android:textColor="@color/black"
+	            android:textSize="15sp"
+	            />
+	    </TableRow>
+	    <TableRow>
+	        <SeekBar 
+	            android:id="@+id/fm_hp_vol_bar"
+	            android:layout_width="320dp"
+	            android:layout_height="wrap_content"
+	            android:max="100"
+	            android:progress="40" />
+	    </TableRow>
+
+	    
+	    <!--<View 
+	        android:id="@+id/fm_div_line_eq"
+	        android:layout_height="2dp"
+	        android:background="@color/black"/>-->
+	    
+	</TableLayout>
+	
+    <TextView
+        android:id="@+id/fm_eq_band1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eq_band1"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/fm_table_layout"
+        android:layout_alignLeft="@id/fm_table_layout"/>
+	<com.android.TestMode.VerticalSeekBar
+		android:id="@+id/fm_eq_band1_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="200dp"
+		android:layout_below="@id/fm_eq_band1"
+		android:layout_alignLeft="@id/fm_table_layout"
+		android:max="100"
+		android:progress="50" />
+	
+	<TextView
+        android:id="@+id/fm_eq_band2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eq_band2"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/fm_table_layout"
+        android:layout_toRightOf="@id/fm_eq_band1"
+        android:layout_marginLeft="35dp"/>
+	<com.android.TestMode.VerticalSeekBar
+		android:id="@+id/fm_eq_band2_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="200dp"
+		android:layout_below="@id/fm_eq_band2"
+		android:layout_toRightOf="@id/fm_eq_band1_bar"
+		android:layout_marginLeft="35dp"
+		android:max="100"
+		android:progress="50" />
+	
+	<TextView
+        android:id="@+id/fm_eq_band3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eq_band3"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/fm_table_layout"
+        android:layout_centerHorizontal="true"/>
+	<com.android.TestMode.VerticalSeekBar
+		android:id="@+id/fm_eq_band3_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="200dp"
+		android:layout_below="@id/fm_eq_band3"
+		android:layout_centerHorizontal="true"
+		android:max="100"
+		android:progress="50" />
+	
+	<TextView
+        android:id="@+id/fm_eq_band4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eq_band4"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/fm_table_layout"
+        android:layout_toRightOf="@id/fm_eq_band3"
+        android:layout_marginLeft="35dp"/>
+	<com.android.TestMode.VerticalSeekBar
+		android:id="@+id/fm_eq_band4_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="200dp"
+		android:layout_below="@id/fm_eq_band4"
+		android:layout_toRightOf="@id/fm_eq_band3_bar"
+		android:layout_marginLeft="35dp"
+		android:max="100"
+		android:progress="50" />
+	
+	<TextView
+        android:id="@+id/fm_eq_band5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/eq_band5"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        android:layout_below="@id/fm_table_layout"
+        android:layout_alignRight="@id/fm_table_layout"/>	
+	<com.android.TestMode.VerticalSeekBar
+		android:id="@+id/fm_eq_band5_bar"
+		android:layout_width="wrap_content"
+		android:layout_height="200dp"
+		android:layout_below="@id/fm_eq_band5"
+		android:layout_alignRight="@id/fm_table_layout"
+		android:max="100"
+		android:progress="50" />				
+    <!-- <View 
+        android:id="@+id/fm_div_line_button"
+        android:layout_height="2dp"
+        android:layout_width="fill_parent"
+        android:background="@color/black"
+        android:layout_below="@id/fm_eq_band1_bar"/>-->
+    <Button
+        android:id="@+id/fm_import_filter_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/fm_eq_band5_bar"
+        android:layout_alignLeft="@id/fm_table_layout"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/import_filter_btn"
+        android:background="@drawable/button_green_selector" />
+    <Button
+        android:id="@+id/fm_forever_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/fm_eq_band5_bar"
+        android:layout_alignRight="@id/fm_table_layout"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/forever_btn"
+        android:background="@drawable/button_blue_selector" />  
+    <Button
+        android:id="@+id/fm_listen_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@id/fm_eq_band5_bar"
+        android:layout_toLeftOf="@id/fm_forever_btn" 
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"        
+        android:text="@string/fm_listen_btn"
+        android:background="@drawable/button_red_selector" />              
+	    
+	
+</RelativeLayout>

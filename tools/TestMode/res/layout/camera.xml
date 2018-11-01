@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:background="@color/white"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent">
+  
+  <SurfaceView
+    android:id="@+id/camera_preview"
+    android:visibility="visible" 
+    android:layout_width="fill_parent" 
+    android:layout_height="fill_parent"
+    >      
+  </SurfaceView> 
+  
+  	<RelativeLayout 
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:id="@+id/relative">
+	<com.android.TestMode.FocusIndicatorView 
+	    android:layout_height="120dp"
+	    android:layout_width="120dp"
+	    android:id="@+id/focus"/>
+	</RelativeLayout>
+ 
+     <!-- modify by [yeez_haojie] 201212.17-->
+	<RelativeLayout 
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" android:padding="1px">
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"
+	       android:layout_width="wrap_content" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</RelativeLayout>

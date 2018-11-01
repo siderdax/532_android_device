@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="com.android.TestMode"
+	android:sharedUserId="android.uid.system">
+	<uses-permission android:name="android.permission.CALL_PHONE" />
+	<uses-permission android:name="android.permission.READ_PHONE_STATE" />
+	<uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+	<uses-permission android:name="android.permission.READ_CONTACTS" />
+	<uses-permission android:name="android.permission.READ_SMS" />
+	<uses-permission android:name="android.permission.WRITE_SMS" />
+	<uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+	<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.VIBRATE" />
+	<uses-permission android:name="android.permission.STATUS_BAR" />
+	<uses-permission android:name="android.permission.EXPAND_STATUS_BAR" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+
+
+	<protected-broadcast android:name="android.intent.action.MAIN" />
+    <protected-broadcast android:name="android.intent.action.SERVICE_STATE" />
+    <protected-broadcast android:name="android.intent.action.RADIO_TECHNOLOGY" />
+    <protected-broadcast android:name="android.intent.action.EMERGENCY_CALLBACK_MODE_CHANGED" />
+    <protected-broadcast android:name="android.intent.action.SIG_STR" />
+    <protected-broadcast android:name="android.intent.action.ANY_DATA_STATE" />
+    <protected-broadcast android:name="android.intent.action.DATA_CONNECTION_FAILED" />
+    <protected-broadcast android:name="android.intent.action.SIM_STATE_CHANGED" />
+    <protected-broadcast android:name="android.intent.action.NETWORK_SET_TIME" />
+    <protected-broadcast android:name="android.intent.action.NETWORK_SET_TIMEZONE" />
+    <protected-broadcast android:name="android.intent.action.ACTION_SHOW_NOTICE_ECM_BLOCK_OTHERS" />
+    <protected-broadcast android:name="android.intent.action.ACTION_MDN_STATE_CHANGED" />
+    <protected-broadcast android:name="android.provider.Telephony.SPN_STRINGS_UPDATED" />
+    <protected-broadcast android:name="com.android.fromWifiCloseGPRS"/>
+	<protected-broadcast android:name="com.android.fromWifiOpenGPRS"/>
+
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
+    <uses-permission android:name="android.permission.ADD_SYSTEM_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.STATUS_BAR" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.SET_TIME_ZONE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_SMS"/>
+    <uses-permission android:name="android.permission.BROADCAST_WAP_PUSH"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <!-- caijq add for network. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SHUTDOWN" /> 
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" android:required="false" />    
+
+	<application
+	    android:name=".MyApp"
+	    android:icon="@drawable/icon"
+	    android:label="@string/testmode_lable">
+		<activity android:name=".TestModeActivity" android:label="@string/app_testmode"
+			android:screenOrientation="nosensor" >
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".ClearDataActivity" android:label="@string/cleardata"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!-- <category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" /> -->
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".MutiTouchTest" android:label="@string/MutiTouchTest"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".TouchTestActivity" android:label="@string/Lens"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> 
+		
+<!-- 	<activity android:name=".CompassTestActivity" android:label="@string/Compass"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> -->
+		
+		<activity android:name=".SIMCardTestActivity" android:label="@string/SimTest"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".PhoneCallTestActivity" android:label="@string/PhoneTest"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+<!-- 	<activity android:name=".GyroscopeSensor" android:label="@string/gyroscope_sensor_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> -->
+
+		<activity android:name=".PsensorTestActivity" android:label="@string/Sensor"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".AudioTestActivity" android:label="@string/Audio"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+				
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".AudioTunningActivity" android:label="@string/AudioTunning"
+		    android:screenOrientation="nosensor">
+			<intent-filter >
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />  
+			</intent-filter>
+			
+		</activity>
+		
+		<activity android:name=".AudioXmlSelectorActivity" android:label="@string/XmlSelector"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+		        <action android:name="android.intent.action.MAIN" />
+		    </intent-filter>
+		</activity>
+		
+		<activity android:name=".SDFileExplorerActivity" android:label="@string/FileExplorer"
+		    android:screenOrientation="nosensor">
+		    <intent-filter>
+		        <action android:name="android.intent.action.MAIN" />
+		    </intent-filter>
+		</activity>
+		
+		<activity android:name=".LcdTunningActivity" android:label="@string/LcdTunning"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />  		        
+		    </intent-filter>    
+		</activity>
+		
+		<activity android:name=".TmuCpuActivity" android:label="@string/TmuTunning"
+		    android:launchMode="singleTask"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />  		        
+		    </intent-filter>    
+		</activity>
+		
+		<service android:name=".TmuService"></service>
+		
+		<activity android:name=".TmuPmicActivity" android:label=""
+		    android:launchMode="singleTask"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" />	        
+		    </intent-filter>    
+		</activity>	
+		
+		<activity android:name=".TmuBatteryActivity" android:label=""
+		    android:launchMode="singleTask"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" /> 		        
+		    </intent-filter>    
+		</activity>							
+
+		<activity android:name=".TmuPaActivity" android:label=""
+		    android:launchMode="singleTask"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" /> 		        
+		    </intent-filter>    
+		</activity>			
+		
+		<activity android:name=".TmuBbActivity" android:label=""
+		    android:launchMode="singleTask"
+		    android:screenOrientation="nosensor">
+		    <intent-filter >
+				<action android:name="android.intent.action.MAIN" /> 		        
+		    </intent-filter>    
+		</activity>	
+				
+		<activity android:name=".WirelessTestActivity" android:label="@string/Wireless"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".CameraTestActivity" android:label="@string/Camera"
+			android:screenOrientation="nosensor"
+			android:configChanges="orientation|keyboardHidden">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".FrontCameraTestActivity" android:label="@string/FrontCamera"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<receiver android:name="TestModeBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE" />
+				<data android:scheme="android_secret_code" android:host="1999" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name="PCBATestModeBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE" />
+				<data android:scheme="android_secret_code" android:host="1943" />
+			</intent-filter>
+		</receiver>
+
+
+		<!-- yeez_haojie add 11.28 -->
+		<receiver android:name="ClearDataBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE" />
+				<data android:scheme="android_secret_code" android:host="7777" />
+			</intent-filter>
+		</receiver>
+
+		<activity android:name=".TestVideoActivity" android:label="@string/VideoTest"
+			android:screenOrientation="nosensor">
+
+
+			<intent-filter>
+				<!-- <action android:name="android.intent.action.MAIN" /> -->
+				<!-- <category android:name="android.intent.category.TEST_MODE" /> -->
+				<!-- <category android:name="android.intent.category.PCBATEST_MODE" /> -->
+				<!-- 				<category android:name="android.intent.category.DEFAULT" /> -->
+				<!--
+					<category android:name="android.intent.category.LAUNCHER" />
+				-->
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".LCDTestActivity" android:label="@string/lcd_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".VersionTestActivity" android:label="@string/test_version"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".SDCardTestActivity" android:label="@string/sdcard_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+<!-- 		<activity android:name=".FlashTestActivity" android:label="@string/flash_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>-->
+
+		<activity android:name=".VibrationTestActivity"
+			android:label="@string/vibrate_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".BatteryTestActivity" android:label="@string/battery_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".BrightTestActivity"
+			android:label="@string/brightness_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+<!--		<activity android:name=".ADCalibrationTestActivity" android:label="@string/Calibration_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>	-->
+		
+		<activity android:name=".RtcNewTest" android:label="@string/rtc_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> 
+
+		<activity android:name=".EarpieceTestActivity" android:label="@string/earpiece_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".BluetoothTestActivity"
+			android:label="@string/bluetooth_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".PCBA_BluetoothTestActivity"
+			android:label="@string/bluetooth_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+
+		<activity android:name=".GSensorTestActivity" android:label="@string/gsensor_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name=".GpsTestNew" android:label="@string/gps_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> 
+
+
+		<activity android:name=".PhoneLoopBackTest"
+			android:label="@string/audioloop_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> 
+		
+		<activity android:name=".EarpieceLoopBackTest"
+			android:label="@string/earpiece_audioloop_test" android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> 
+
+		<activity android:name=".KeypadTestActivity" android:label="@string/keypad_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity>
+		
+		<activity android:name="CheckTestModeActivity" android:label="@string/app_check_testmode"
+			android:screenOrientation="nosensor" android:process="com.android.phone">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />		
+				
+
+			</intent-filter>
+		</activity>
+
+		<!-- <activity android:name=".FMTestActivity" android:label="@string/FM_test"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" />
+			</intent-filter>
+		</activity> --> 
+	
+		<!-- <receiver android:name="CheckTestModeBroadcastReceiver">
+			<intent-filter>
+				<action android:name="android.provider.Telephony.SECRET_CODE" />
+				<data android:scheme="android_secret_code" android:host="83788" />
+			</intent-filter>
+		</receiver> --> 
+
+		<activity android:name=".TestResultActivity" android:label="@string/TestResultTitle"
+			android:screenOrientation="nosensor">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<!-- <category android:name="android.intent.category.TEST_MODE" />
+				<category android:name="android.intent.category.PCBATEST_MODE" /> -->
+			</intent-filter>
+		</activity> 
+
+		 <receiver android:name="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCALE_CHANGED"/>
+            </intent-filter>
+        </receiver>
+        
+	</application>
+
+</manifest> 

@@ -1,0 +1,8 @@
+type january_device, dev_type;
+type january_booster, domain;
+type january_booster_exec, exec_type, file_type;
+init_daemon_domain(january_booster)
+
+#allow january_booster device:file rw_file_perms;
+allow january_booster self:capability dac_override;
+allow january_booster january_device:chr_file rw_file_perms;

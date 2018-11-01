@@ -1,0 +1,6 @@
+type march_hotplug, domain;
+type march_hotplug_exec, exec_type, file_type;
+
+init_daemon_domain(march_hotplug)
+
+allow march_hotplug proc:file rw_file_perms;

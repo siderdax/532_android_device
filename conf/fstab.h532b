@@ -1,0 +1,31 @@
+# Android fstab file.
+#<src>                  <mnt_point>         <type>    <mnt_flags and options>                               <fs_mgr_flags>
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+
+/dev/block/mmcblk0p2	/system		ext4		ro	wait
+/dev/block/mmcblk0p4	/cache		ext4		noatime,nosuid,nodev,nomblk_io_submit,errors=panic	wait
+/dev/block/mmcblk0p3	/data		ext4		noatime,nosuid,nodev,nomblk_io_submit,discard,noauto_da_alloc,errors=panic    wait,forceencrypt=/cache/metadata
+
+#/dev/block/platform/15740000.dwmmc0/by-name/system	/system	ext4	ro	wait
+#/dev/block/platform/15740000.dwmmc0/by-name/cache	/cache	ext4	noatime,nosuid,nodev,nomblk_io_submit,errors=panic	wait
+#/dev/block/platform/15740000.dwmmc0/by-name/userdata	/data	ext4	noatime,nosuid,nodev,nomblk_io_submit,discard,noauto_da_alloc,errors=panic    wait,forceencrypt=/cache/metadata
+
+#YGRYU 2015.12.02
+/dev/block/mmcblk0p1	/storage/sdcard1	vfat		noatime,nosuid,nodev,errors=panic		wait,check
+
+# VOLD
+/devices/15560000.dwmmc2/mmc_host/mmc2		auto		vfat	default	voldmanaged=sdcard0:auto
+#/devices/15510000.usb				auto	vfat	default	voldmanaged=usb1:auto
+#/devices/15400000.usb/15400000.dwc3/xhci-hcd	auto	vfat	default	voldmanaged=usb2:auto
+#YGRYU 2015.11.12
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sda*	auto	vfat	defaults	voldmanaged=usb1:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdb*	auto	vfat	defaults	voldmanaged=usb2:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdc*	auto	vfat	defaults	voldmanaged=usb3:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdd*	auto	vfat	defaults	voldmanaged=usb4:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sde*	auto	vfat	defaults	voldmanaged=usb5:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdf*	auto	vfat	defaults	voldmanaged=usb6:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdg*	auto	vfat	defaults	voldmanaged=usb7:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdh*	auto	vfat	defaults	voldmanaged=usb8:auto
+/devices/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-*/1-*:1.0/host*/target*:0:0/*:0:0:0/block/sdi*	auto	vfat	defaults	voldmanaged=usb9:auto

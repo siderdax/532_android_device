@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="horizontal"
+    android:id="@+id/radio_group"
+    android:background="@color/gray">
+    
+   	<RadioButton
+       	style="@style/radio_tab"
+       	android:drawableTop="@drawable/playback_tab_selector"
+       	android:text="@string/playback_scene_btn"
+       	android:textColor="@drawable/tab_text_selector"
+       	android:id="@+id/playback_tab"/>
+   
+   	<RadioButton
+		style="@style/radio_tab"
+		android:drawableTop="@drawable/record_tab_selector"
+       	android:text="@string/record_scene_btn"
+       	android:textColor="@drawable/tab_text_selector"
+       	android:id="@+id/record_tab" />
+       
+   	<RadioButton
+       	style="@style/radio_tab"
+       	android:drawableTop="@drawable/voice_tab_selector"
+       	android:text="@string/voice_scene_btn"
+       	android:textColor="@drawable/tab_text_selector"
+       	android:id="@+id/voice_tab"/>
+           
+   	<RadioButton
+       	style="@style/radio_tab"
+       	android:drawableTop="@drawable/bt_tab_selector"
+       	android:text="@string/bt_scene_btn"
+       	android:textColor="@drawable/tab_text_selector"
+       	android:id="@+id/bt_tab"/>
+    
+   	<RadioButton
+       	style="@style/radio_tab"
+       	android:drawableTop="@drawable/fm_tab_selector"
+       	android:text="@string/fm_scene_btn"
+       	android:textColor="@drawable/tab_text_selector"
+       	android:id="@+id/fm_tab"/>
+</RadioGroup>    

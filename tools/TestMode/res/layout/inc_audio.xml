@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  	
+    <LinearLayout 
+			android:id="@+id/LinearLayout02"
+			android:layout_width="fill_parent"
+			android:layout_height="40dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout>  
+		
+   	<Button android:id="@+id/btnSpeak"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/playMusic"
+				android:padding="20px"/>
+				 	
+    <TextView
+    	android:id="@+id/Speak_Prompt"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:text="@string/Test_NT"/> 
+    	
+</LinearLayout>

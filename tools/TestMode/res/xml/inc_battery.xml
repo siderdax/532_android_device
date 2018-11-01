@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView  
+		android:id="@+id/status"
+		android:textSize="40px"
+	    android:layout_width="fill_parent" 
+	    android:layout_height="wrap_content" 
+	    android:gravity="center"
+	    />
+	
+	<LinearLayout 
+		android:layout_width="fill_parent"
+		android:layout_height="100dip"
+		android:orientation="horizontal" 
+		android:padding="2px">
+	</LinearLayout> 
+	
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35px"
+        android:text="@string/battery_info"
+        android:paddingLeft="2dp"
+		android:paddingBottom="5dp"
+		android:textColor="#6495ED"
+        />
+    
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+		android:background="#6495ED"
+        />
+    
+    <ListView android:id="@+id/BatteyInfoView" 
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		/>
+
+</LinearLayout>

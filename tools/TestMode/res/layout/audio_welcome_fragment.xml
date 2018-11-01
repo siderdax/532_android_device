@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.android.TestMode"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:id="@+id/welcome_layout" >
+    
+    <TextView
+        android:id="@+id/welcome_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_title"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:id="@+id/welcome_author"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome_author"
+        android:textColor="@color/blue"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:layout_below="@id/welcome_title"
+        android:layout_marginLeft="115dp"/>	
+        
+    <Button
+        android:id="@+id/logo_btn"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/logo"
+        android:layout_below="@id/welcome_author"
+        android:layout_marginLeft="85dp" /> 
+            
+
+</RelativeLayout>

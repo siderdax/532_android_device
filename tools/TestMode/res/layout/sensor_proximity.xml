@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  [yeez_haojie modify 12.18] -->
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+
+	<TextView
+		android:id="@+id/txt_data_psensor"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below = "@+id/id_title_psensor"/>
+	<TextView
+		android:id="@+id/txt_value_psensor"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below = "@+id/txt_data_psensor"/>
+	
+	<TextView
+		android:id="@+id/txt_title_dizhao"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:layout_below = "@+id/txt_value_psensor"
+		android:text="@string/tip_for_psensor"/>
+	
+	<TextView
+	    	android:id="@+id/id_title_psensor"
+			android:layout_height="wrap_content"
+			android:layout_width="wrap_content"
+			android:textColor="#ffff0000"
+			android:layout_gravity="center_horizontal"
+			android:text="@string/tip_for_psensor"
+			android:layout_alignParentTop="true"/>
+	<LinearLayout
+	    android:layout_below = "@+id/txt_title_dizhao"
+		android:layout_width="fill_parent"
+		android:layout_height="200dip"
+		android:orientation="vertical"
+		android:gravity="center">
+
+		<TextView
+			android:layout_height="80dip"
+			android:layout_width="80dip"
+			android:id="@+id/txt_psensor" />
+	</LinearLayout>
+
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="200dip"
+		android:orientation="vertical"
+		android:layout_above="@+id/result_bt"	>
+		<TextView
+				android:layout_height="wrap_content"
+				android:id="@+id/txt_value_lsensor"
+				android:layout_width="fill_parent"
+				android:gravity="center"/>
+		<ProgressBar
+				android:id="@+id/progressbar_lsensor"
+				style="?android:attr/progressBarStyleHorizontal"
+				android:layout_height="wrap_content"
+				android:layout_width="fill_parent"/>
+	</LinearLayout>	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id ="@+id/result_bt"
+	    android:layout_width="fill_parent" android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true" android:padding="1px">
+
+
+    <!-- android:visibility="gone" [yeez_haojie modify 11.20] -->
+    <Button android:id="@+id/testpassed"
+       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+       android:text="@string/Test_Pass" android:layout_height="80px"
+       
+       android:layout_width="wrap_content" />
+    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+       android:layout_alignParentTop="true" android:layout_height="80px"
+       android:layout_width="wrap_content"></Button>
+</RelativeLayout>
+		
+</RelativeLayout>

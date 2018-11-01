@@ -1,0 +1,17 @@
+#
+# system.prop for h532b
+#
+
+ro.arch=exynos7420
+ro.gps.port=/dev/ttySAC1
+
+# ro.kernel.qemu=1
+# ro.kernel.qemu.gles=1
+persist.demo.hdmirotationlock=false
+ro.zygote.disable_gl_preload=1
+
+# HACK - Error on the 3D test of Antutu v5.6
+ro.kernel.android.checkjni=0
+
+# mlan0 for marvell 8887
+wifi.interface=mlan0

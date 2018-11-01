@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  	
+    <LinearLayout 
+			android:id="@+id/LinearLayout01"
+			android:layout_width="fill_parent"
+			android:layout_height="40dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout>  
+		
+   	<Button android:id="@+id/btnBT"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/test_begin"
+				android:textSize="30px"
+				android:padding="20px"/>
+				 	
+    <TextView
+    	android:id="@+id/BT_Prompt"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:text="@string/Test_NT"/> 
+
+
+   	<LinearLayout 
+		android:id="@+id/LinearLayout02"
+		android:layout_width="fill_parent"
+		android:layout_height="20dip"
+		android:orientation="horizontal" 
+		android:padding="2px">
+	</LinearLayout> 
+
+	<TextView
+    	android:id="@+id/BT_Address"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"/> 
+
+    	
+</LinearLayout>

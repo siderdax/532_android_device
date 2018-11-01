@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tmu_trip_point_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/orange"
+    android:shrinkColumns="1,3"
+    android:stretchColumns="5" >
+    
+    <!-- Trip Point -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>    
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+            android:id="@+id/trip_point_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/trip_point"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <EditText
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:hint="@string/hint"
+        	android:ems="6" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+    </TableRow>
+    
+    <!--  Type -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/type"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <EditText
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:hint="@string/hint"
+        	android:ems="6" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" /> 
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        	     
+    </TableRow>
+    
+    <!--  Cooler Name -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/cooler_name"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_cooler_name"
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" />    
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        	  
+    </TableRow> 
+    
+    <!-- Condtion 1 -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/condition1"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_tz_condition1"
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        	      
+    </TableRow>
+    
+    <!-- Condtion 2 -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/condition2"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_tz_condition2"
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" />  
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        	     
+    </TableRow>
+    
+    <!-- Condtion 3 -->
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    <TableRow>
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="@string/condition3"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:background="@color/black"
+            android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <Spinner
+            android:id="@+id/spinner_tz_condition3"
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>
+        <TextView
+        	android:layout_width="wrap_content"
+        	android:layout_height="40dp"
+        	android:background="@color/gray"
+        	android:textSize="15sp"
+        	android:text="@string/NULL"
+        	android:textColor="@color/black"
+        	android:gravity="center" />
+        <View 
+            android:layout_height="40dp"
+            android:layout_width="1dp"
+            android:background="@color/white"/>                
+    </TableRow>
+    
+
+    
+    <View 
+    	android:layout_height="1dp"
+        android:layout_width="match_parent"
+        android:background="@color/white"/>
+    
+</TableLayout>

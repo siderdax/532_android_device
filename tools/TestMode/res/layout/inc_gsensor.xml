@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <TextView
+    	android:id="@+id/title"
+    	android:gravity="center_horizontal"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/gsensor_test"/>
+    	
+   	<LinearLayout 
+			android:id="@+id/LinearLayout01"
+			android:layout_width="fill_parent"
+			android:layout_height="30dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout> 
+		
+    <TextView
+    	android:id="@+id/gtitle"
+    	android:textSize="25px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:text="@string/GSensor"/>
+    	
+    <TextView
+    	android:id="@+id/myTextView1"
+    	android:textSize="20px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"/> 
+    	
+    <TextView
+    	android:id="@+id/myTextView2"
+    	android:textSize="20px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"/>
+    	
+    <TextView
+    	android:id="@+id/myTextView3"
+    	android:textSize="20px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"/>
+    	
+  	<LinearLayout 
+			android:id="@+id/LinearLayout02"
+			android:layout_width="fill_parent"
+			android:layout_height="60dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout>
+		
+    	
+    <LinearLayout 
+			android:id="@+id/LinearLayout02"
+			android:layout_width="fill_parent"
+			android:layout_height="50dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- android:visibility="gone" [yeez_haojie modify 2012.11.14]-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    
+    <TextView
+		android:id="@+id/phone_test_tv"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content" 
+		android:gravity="center"
+		/>
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent" android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true" android:padding="1px">
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"
+	       
+	       android:layout_width="wrap_content" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</RelativeLayout>

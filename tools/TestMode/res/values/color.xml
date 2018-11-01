@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="lightgreen">#ff66cccc</color>
+<color name="green">#ffccff66</color>
+<color name="yellow">#ffff00</color>
+<color name="black">#ff000000</color>
+<color name="white">#ffffffff</color>
+<color name="blue">#ff006699</color>
+<color name="lightblue">#1E90FF</color>
+<color name="gray">#808080</color>
+<color name="dimgray">#696969</color>
+<color name="linen">#faf0e6</color>
+<color name="limegreen">#32cd32</color>
+<color name="forestgreen">#228b22</color>
+<color name="orange">#ff8c00</color>
+<color name="red">#cc0000</color>
+
+<color name="divider_line_color">#ff000000</color>
+</resources>

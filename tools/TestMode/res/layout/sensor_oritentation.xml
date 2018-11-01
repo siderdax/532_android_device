@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/layout"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<TextView
+		android:id="@+id/txt_msg_osensor"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+	<TextView
+		android:id="@+id/txt_msg_orien"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" />
+	<LinearLayout
+		android:orientation="vertical"
+		android:gravity="center_vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:layout_weight="1">
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_horizontal">
+			<ImageView
+				android:id="@+id/orien_image"
+				android:layout_width="250dip"
+				android:layout_height="250dip" />
+		</LinearLayout>
+	</LinearLayout>
+	
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" android:padding="1px">
+
+
+	    <Button android:id="@+id/testpassed"
+	       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+	       android:text="@string/Test_Pass" android:layout_height="80px"
+	       android:layout_width="wrap_content" />
+	    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+	       android:layout_alignParentTop="true" android:layout_height="80px"
+	       android:layout_width="wrap_content"></Button>
+	</RelativeLayout>
+</LinearLayout>

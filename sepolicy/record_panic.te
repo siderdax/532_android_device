@@ -1,0 +1,29 @@
+# logkit utilities
+type record_panic, domain;
+type record_panic_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(record_panic)
+
+allow record_panic self:capability { dac_override dac_read_search fsetid };
+allow record_panic self:capability2 syslog;
+
+# Execute the shell or system commands.
+allow record_panic shell_exec:file rx_file_perms;
+
+# Allow executing files on system, such as:
+#   /system/bin/toolbox
+allow record_panic system_file:file execute_no_trans;
+
+allow record_panic system_data_file:dir create_dir_perms;
+allow record_panic system_data_file:file r_file_perms;
+allow record_panic system_data_file:dir r_dir_perms;
+#allow logkit anr_data_file:file r_file_perms;
+#allow logkit anr_data_file:dir r_dir_perms;
+allow record_panic sdcard_internal:dir create_dir_perms;
+allow record_panic sdcard_internal:file create_file_perms;
+allow record_panic kernel:system syslog_read;
+allow record_panic kernel:system syslog_mod;
+
+# logd access
+read_logd(record_panic)

@@ -1,0 +1,29 @@
+# logkit utilities
+type logkit, domain;
+type logkit_exec, exec_type, file_type;
+
+# Started by init
+init_daemon_domain(logkit)
+
+allow logkit self:capability { dac_override dac_read_search fsetid };
+allow logkit self:capability2 syslog;
+
+# Execute the shell or system commands.
+allow logkit shell_exec:file rx_file_perms;
+
+# Allow executing files on system, such as:
+#   /system/bin/toolbox
+allow logkit system_file:file execute_no_trans;
+
+#allow logkit system_data_file:dir create_dir_perms;
+allow logkit system_data_file:file r_file_perms;
+allow logkit system_data_file:dir r_dir_perms;
+allow logkit anr_data_file:file r_file_perms;
+allow logkit anr_data_file:dir r_dir_perms;
+allow logkit sdcard_internal:dir create_dir_perms;
+allow logkit sdcard_internal:file create_file_perms;
+allow logkit kernel:system syslog_read;
+allow logkit kernel:system syslog_mod;
+
+# logd access
+read_logd(logkit)

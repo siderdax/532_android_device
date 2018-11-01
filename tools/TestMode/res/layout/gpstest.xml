@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <!-- view1 goes on top -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+    	<TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/gps_test" />
+    
+    	<!-- [yeez_haojie add 12.21] -->
+    	<TextView
+ 	        android:id="@+id/tv"
+ 	        android:layout_width="wrap_content"
+ 	        android:layout_height="wrap_content"
+ 	        android:textSize="30px" >
+ 	    </TextView>
+    	
+    	<!-- [yeez_haojie add android:visibility="gone" 3.6] -->
+        <TextView
+	    	android:id="@+id/myTextView1"
+	    	android:textSize="20px"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	/> 
+	    <!-- [yeez_haojie add android:visibility="gone" 12.21] -->	
+    	<TextView
+	    	android:id="@+id/myTextView2"
+	    	android:textSize="20px"
+	    	android:layout_width="fill_parent"
+	    	android:layout_height="wrap_content"
+	    	android:visibility="gone"/> 
+    	
+
+</LinearLayout>
+
+
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent" android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true" android:padding="1px">
+
+
+    <!-- android:visibility="gone" [yeez_haojie modify 11.14]-->
+    <Button android:id="@+id/testpassed"
+       android:layout_alignParentRight="true" android:layout_marginLeft="10px"
+       android:text="@string/Test_Pass" android:layout_height="80px"
+       
+       android:layout_width="wrap_content" />
+    <Button android:id="@+id/testfailed" android:text="@string/Test_Fail"
+       android:layout_alignParentTop="true" android:layout_height="80px"
+       android:layout_width="wrap_content"></Button>
+</RelativeLayout>
+
+
+</RelativeLayout>

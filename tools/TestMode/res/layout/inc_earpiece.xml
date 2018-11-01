@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation = "vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  	
+   	<LinearLayout 
+			android:id="@+id/LinearLayout01"
+			android:layout_width="fill_parent"
+			android:layout_height="30dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout> 
+
+				
+		<TextView
+    	android:id="@+id/Earpiece_Prompt"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal" 
+    	android:text="@string/EP_INSERT_A"/> 
+   
+    <LinearLayout 
+			android:id="@+id/LinearLayout02"
+			android:layout_width="fill_parent"
+			android:layout_height="40dip"
+			android:orientation="horizontal" 
+			android:padding="2px">
+		</LinearLayout>  
+		
+    <TextView
+    	android:id="@+id/Speak_Prompt"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"/> 
+
+    <LinearLayout 
+	android:id="@+id/LinearLayout03"
+	android:layout_width="fill_parent"
+	android:layout_height="40dip"
+	android:orientation="horizontal" 
+	android:padding="2px">
+	</LinearLayout>  
+		
+    <TextView
+    	android:id="@+id/Key_Prompt"
+    	android:textSize="40px"
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:orientation="horizontal"
+    	android:text="@string/EP_KEY_A"/> 
+    	
+</LinearLayout>

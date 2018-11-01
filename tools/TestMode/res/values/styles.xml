@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+   
+   
+   <style name="TableTextStyle">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">14dip</item>
+        <item name="android:textColor">#ff000000</item>
+   </style>
+   
+   <style name="TableTextStyleTitle">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">15dip</item>
+        <item name="android:textColor">#ff000000</item>
+        <item name="android:textStyle">bold</item>
+   </style>
+   	<style name="itemTextKeyStyle">
+		<item name="android:textSize">20sp</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textColor">#FFFFFF</item>
+	</style>
+	<style name="itemTextValueStyle">
+		<item name="android:textSize">20sp</item>
+	</style>
+	
+	<style name="radio_tab">
+	    <item name="android:layout_height">wrap_content</item>  
+        <item name="android:layout_width">match_parent</item>  
+        <item name="android:layout_weight">1</item>  
+        <item name="android:gravity">center</item>  
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item> 
+        <item name="android:paddingTop">5dp</item>  
+        <item name="android:paddingBottom">0dp</item>    
+        <item name="android:button">@null</item> 
+	</style>
+</resources>
